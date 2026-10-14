@@ -1,19 +1,16 @@
+import { BRAND } from "../data/site";
+import { Glyph } from "./Icons";
+
 export default function Footer() {
   return (
     <footer className="foot">
-      <div className="wrap foot__inner">
-        <div className="foot__left">
-          <span className="google-dots" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <span />
-          </span>
-          <span>© {new Date().getFullYear()} EverKrypton — crafted with Chrome energy</span>
-        </div>
-        <p className="foot__right">
-          Built with React · Vite · TypeScript · <a className="foot__top" href="#top">Back to top</a>
-        </p>
+      <div className="container foot__row">
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+          <Glyph size={22} />
+          © {new Date().getFullYear()} {BRAND.name}
+        </span>
+        <span>Built with React, TypeScript, and Vite.</span>
+        <a href="#top">Back to top</a>
       </div>
     </footer>
   );

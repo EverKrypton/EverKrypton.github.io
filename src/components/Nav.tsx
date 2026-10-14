@@ -1,47 +1,80 @@
-const links = [
+import { useEffect, useState } from "react";
+import { BRAND } from "../data/site";
+import { Glyph } from "./Icons";
+
+const LINKS = [
   { href: "#work", label: "Work" },
-  { href: "#about", label: "About" },
+  { href: "#capabilities", label: "Capabilities" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
 
-function ChromeLogo() {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <circle cx="24" cy="24" r="20" stroke="var(--violet)" strokeWidth="4" />
-      <circle cx="24" cy="24" r="8" fill="var(--violet)" />
-      <path d="M24 4a20 20 0 0 1 17.32 10H24V4z" fill="var(--emerald)" />
-      <path d="M41.32 14A20 20 0 0 1 34 38.66L24 24h17.32z" fill="var(--amber)" />
-      <path d="M34 38.66A20 20 0 0 1 8.68 34L24 24l10 14.66z" fill="var(--violet-2)" />
-      <path d="M8.68 34A20 20 0 0 1 24 4v20L8.68 34z" fill="var(--violet)" />
-    </svg>
-  );
-}
-
 export default function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
-    <header className="nav nav-glass" id="top">
-      <div className="wrap nav__inner">
-        <a href="#top" className="brand" aria-label="EverKrypton, home">
-          <span className="brand__logo">
-            <ChromeLogo />
+    <header className={`nav ${scrolled ? "is-scrolled" : ""} ${open ? "is-open" : ""}`} id="top">
+      <div className="container nav__row">
+        <a href="#top" className="brand" aria-label={`${BRAND.name}, home`} onClick={() => setOpen(false)}>
+          <span className="brand__glyph">
+            <Glyph size={30} />
           </span>
-          <span className="brand__name">
+          <span>
             Ever<b>Krypton</b>
           </span>
         </a>
 
         <nav className="nav__links" aria-label="Primary">
-          {links.map((l) => (
+          {LINKS.map((l) => (
             <a key={l.href} href={l.href}>
               {l.label}
             </a>
           ))}
         </nav>
 
-        <a href="#work" className="chrome-btn chrome-btn-primary nav__cta">
-          View work
+        <button
+          type="button"
+          className="nav__toggle"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span aria-hidden="true" />
+        </button>
+
+        <a href="#contact" className="btn btn--primary btn--sm nav__cta">
+          Start a project
         </a>
       </div>
+
+      {open && (
+        <div className="container">
+          <nav className="nav__sheet" id="mobile-menu" aria-label="Mobile">
+            {LINKS.map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
