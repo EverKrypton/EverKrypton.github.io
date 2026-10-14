@@ -110,6 +110,15 @@ export function IconArrowDown({ size = 16, className }: IconProps) {
   );
 }
 
+export function IconHandUp({ size = 22, className }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <rect x="9.6" y="1.6" width="3.8" height="12" rx="1.9" />
+      <path d="M6.9 12.6h7.5c1.9 0 3.4 1.5 3.4 3.4v1.3c0 2.7-2.2 4.9-4.9 4.9h-3.6c-2.7 0-4.9-2.2-4.9-4.9v-1.1c0-2 1.1-3.6 2.5-3.6z" />
+    </svg>
+  );
+}
+
 export function Glyph({ size = 30 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true">

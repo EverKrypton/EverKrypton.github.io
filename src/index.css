@@ -314,11 +314,6 @@ img, svg { display: block; }
 .foot { border-top: 1px solid var(--line); padding: 34px 0; }
 .foot__row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--ink-3); font-size: 13.5px; }
 .foot__row a:hover { color: var(--ink); }
-.foot__top {
-  background: none; border: 0; padding: 0; cursor: pointer;
-  font: inherit; color: inherit; transition: color 0.2s var(--ease);
-}
-.foot__top:hover { color: var(--violet-2); }
 
 /* ---------- back to top ---------- */
 .to-top {
@@ -336,12 +331,18 @@ img, svg { display: block; }
 .to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
 .to-top:hover { background: var(--violet-btn); color: var(--white); border-color: transparent; transform: translateY(-3px); }
 .to-top:active { transform: translateY(-1px) scale(0.96); }
-.to-top svg { transform: rotate(180deg); }
+.to-top__hand { display: grid; place-items: center; animation: point-up 1.5s var(--ease) infinite; }
+
+@keyframes point-up {
+  0%, 55%, 100% { transform: translateY(0) scale(1); }
+  25% { transform: translateY(-6px) scale(1.08); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .to-top { transition: opacity 0.01ms, visibility 0.01ms; transform: none; }
   .to-top.is-visible { transform: none; }
   .to-top:hover { transform: none; }
+  .to-top__hand { animation: none; }
 }
 @media (max-width: 520px) {
   .to-top { right: 16px; bottom: 16px; }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IconArrowDown } from "./Icons";
+import { IconHandUp } from "./Icons";
 
 export function scrollToTop() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -28,7 +28,9 @@ export default function BackToTop() {
       tabIndex={visible ? 0 : -1}
       aria-hidden={!visible}
     >
-      <IconArrowDown size={18} />
+      <span className="to-top__hand">
+        <IconHandUp size={24} />
+      </span>
     </button>
   );
 }
