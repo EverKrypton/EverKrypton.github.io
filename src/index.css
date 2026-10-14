@@ -314,6 +314,38 @@ img, svg { display: block; }
 .foot { border-top: 1px solid var(--line); padding: 34px 0; }
 .foot__row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--ink-3); font-size: 13.5px; }
 .foot__row a:hover { color: var(--ink); }
+.foot__top {
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font: inherit; color: inherit; transition: color 0.2s var(--ease);
+}
+.foot__top:hover { color: var(--violet-2); }
+
+/* ---------- back to top ---------- */
+.to-top {
+  position: fixed; right: 22px; bottom: 22px; z-index: 90;
+  width: 46px; height: 46px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer;
+  background: var(--surface); color: var(--violet-2);
+  border: 1px solid var(--line-2); box-shadow: var(--shadow-2);
+  opacity: 0; visibility: hidden;
+  transform: translateY(14px) scale(0.9);
+  transition: opacity 0.32s var(--ease), transform 0.32s var(--ease),
+    visibility 0.32s, background 0.2s var(--ease), color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+.to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--violet-btn); color: var(--white); border-color: transparent; transform: translateY(-3px); }
+.to-top:active { transform: translateY(-1px) scale(0.96); }
+.to-top svg { transform: rotate(180deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  .to-top { transition: opacity 0.01ms, visibility 0.01ms; transform: none; }
+  .to-top.is-visible { transform: none; }
+  .to-top:hover { transform: none; }
+}
+@media (max-width: 520px) {
+  .to-top { right: 16px; bottom: 16px; }
+}
 
 /* ---------- reveal ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.75s var(--ease), transform 0.75s var(--ease); }

@@ -1,5 +1,6 @@
 import { BRAND } from "../data/site";
 import { Glyph } from "./Icons";
+import { scrollToTop } from "./BackToTop";
 
 export default function Footer() {
   return (
@@ -10,7 +11,9 @@ export default function Footer() {
           © {new Date().getFullYear()} {BRAND.name}
         </span>
         <span>Built with React, TypeScript, and Vite.</span>
-        <a href="#top">Back to top</a>
+        <button type="button" className="foot__top" onClick={scrollToTop}>
+          Back to top
+        </button>
       </div>
     </footer>
   );
