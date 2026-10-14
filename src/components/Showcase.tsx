@@ -65,26 +65,14 @@ function ProductBlock({ product, index }: { product: Product; index: number }) {
             ))}
           </ul>
           <div className="product__actions">
-            {product.url ? (
-              <a href={product.url} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
-                Open product
-                <IconArrowUpRight size={17} />
-              </a>
-            ) : (
-              <a href={product.repo} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
-                Read the source
-                <IconArrowUpRight size={17} />
-              </a>
-            )}
+            <a href={product.url} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
+              Open product
+              <IconArrowUpRight size={17} />
+            </a>
             <a href={product.repo} target="_blank" rel="noopener noreferrer" className="btn btn--secondary">
               GitHub
             </a>
           </div>
-          {!product.url && (
-            <p style={{ marginTop: 14, fontFamily: "var(--mono)", fontSize: 12, color: "var(--ink-3)" }}>
-              Public URL pending — source is live and public.
-            </p>
-          )}
         </>
       </Reveal>
 

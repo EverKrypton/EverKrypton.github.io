@@ -16,7 +16,7 @@ export const HERO = {
   primaryCta: { label: "See the work", href: "#work" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
   meta: [
-    { label: "Two products, built end to end", tone: "emerald" },
+    { label: "Two live products", tone: "emerald" },
     { label: "Self-hosted, not templates", tone: "violet" },
     { label: "Open to new work", tone: "amber" },
   ],
@@ -46,7 +46,7 @@ export const PRODUCTS: Product[] = [
       "API keys and Sign-In with Ethereum for market makers",
     ],
     repo: "https://github.com/EverKrypton/exchange",
-    url: "",
+    url: "https://volt-app-hq.vercel.app/",
   },
   {
     id: "oddsly",
@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
       "TOTP two-factor auth and an operator panel",
     ],
     repo: "https://github.com/EverKrypton/oddsly",
-    url: "",
+    url: "https://oddsly-app.vercel.app/",
   },
 ];
 
@@ -133,7 +133,7 @@ export const FAQ: Faq[] = [
   },
   {
     q: "Are these products live?",
-    a: "They are built and self-hosted. Public deployment URLs are not published yet, so each product links to its source and a walkthrough of the mechanics rather than a live URL.",
+    a: "Yes — both are deployed and you can use them right now. VOLT runs the exchange terminal and Oddsly the sportsbook; each links to a live URL and to its source.",
   },
   {
     q: "Can you work with an existing codebase?",

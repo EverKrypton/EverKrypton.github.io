@@ -43,9 +43,9 @@ product mechanics, shown on the page.
 
 - Static site. React + TypeScript + Vite, deployed to GitHub Pages at the
   account root (`everkrypton.github.io`) via GitHub Actions.
-- Product live URLs are **not yet published**; cards must present the products
-  honestly and expose repository/source links until URLs exist. Do not invent
-  live URLs.
+- Product live URLs are published and must stay accurate:
+  VOLT — <https://volt-app-hq.vercel.app/>;
+  Oddsly — <https://oddsly-app.vercel.app/>.
 - Brand palette is fixed: violet / emerald / amber on a near-black ground.
 - No fabricated testimonials, metrics, clients, or pricing.
 
@@ -61,8 +61,9 @@ product mechanics, shown on the page.
 - Real product facts from the `exchange` and `oddsly` repositories
   (`PRODUCT.md`, `README.md`).
 - Repositories: `github.com/EverKrypton/exchange`, `github.com/EverKrypton/oddsly`.
-- Absent (must not be fabricated): live product URLs, customer counts, revenue,
-  benchmarks, press, testimonials.
+- Live deployments: `volt-app-hq.vercel.app` (VOLT), `oddsly-app.vercel.app` (Oddsly).
+- Absent (must not be fabricated): customer counts, revenue, benchmarks, press,
+  testimonials.
 
 ## Product Principles
 
