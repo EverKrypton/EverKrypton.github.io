@@ -30,6 +30,9 @@ export type Product = {
   points: string[];
   repo: string;
   url: string;
+  /** public asset base for the screenshot, e.g. "/volt" -> /volt.webp + /volt.jpg */
+  preview: string;
+  domain: string;
 };
 
 export const PRODUCTS: Product[] = [
@@ -47,6 +50,8 @@ export const PRODUCTS: Product[] = [
     ],
     repo: "https://github.com/EverKrypton/exchange",
     url: "https://volt-app-hq.vercel.app/",
+    preview: "/volt",
+    domain: "volt-app-hq.vercel.app",
   },
   {
     id: "oddsly",
@@ -62,6 +67,8 @@ export const PRODUCTS: Product[] = [
     ],
     repo: "https://github.com/EverKrypton/oddsly",
     url: "https://oddsly-app.vercel.app/",
+    preview: "/oddsly",
+    domain: "oddsly-app.vercel.app",
   },
 ];
 

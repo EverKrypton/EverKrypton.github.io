@@ -1,48 +1,7 @@
 import Reveal from "./Reveal";
-import BetSlip from "./BetSlip";
+import SitePreview from "./SitePreview";
 import { PRODUCTS, type Product } from "../data/site";
 import { IconCheck, IconArrowUpRight } from "./Icons";
-
-function ProductArt({ id }: { id: string }) {
-  if (id === "oddsly") return <BetSlip />;
-  return <TerminalArt />;
-}
-
-function TerminalArt() {
-  return (
-    <div className="art" role="img" aria-label="Preview of the VOLT order book and API access">
-      <div className="mock__bar" style={{ border: "none", background: "transparent", padding: "0 0 16px" }}>
-        <span className="mock__title">engine · order book</span>
-        <span className="mock__pill">
-          <i />
-          matched
-        </span>
-      </div>
-      <div style={{ display: "grid", gap: 8 }}>
-        {[
-          { side: "bid", p: "64,138.0", q: "0.940", d: 82 },
-          { side: "ask", p: "64,149.2", q: "0.560", d: 52 },
-          { side: "bid", p: "64,127.5", q: "1.560", d: 100 },
-          { side: "ask", p: "64,160.7", q: "0.418", d: 40 },
-        ].map((r) => (
-          <div className={`book__row ${r.side}`} key={r.p + r.side}>
-            <span className="fill" style={{ width: `${r.d}%` }} aria-hidden="true" />
-            <span className="p">{r.p}</span>
-            <span className="q">{r.q}</span>
-          </div>
-        ))}
-      </div>
-      <div className="slip__row" style={{ marginTop: 20, paddingTop: 16, borderTop: "1px solid var(--line)" }}>
-        <span>Maker / taker</span>
-        <b>0.10% / 0.20%</b>
-      </div>
-      <div className="slip__row">
-        <span>Settlement</span>
-        <b>atomic</b>
-      </div>
-    </div>
-  );
-}
 
 function ProductBlock({ product, index }: { product: Product; index: number }) {
   const flip = index % 2 === 1;
@@ -66,7 +25,7 @@ function ProductBlock({ product, index }: { product: Product; index: number }) {
           </ul>
           <div className="product__actions">
             <a href={product.url} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
-              Open product
+              Open {product.name}
               <IconArrowUpRight size={17} />
             </a>
             <a href={product.repo} target="_blank" rel="noopener noreferrer" className="btn btn--secondary">
@@ -77,7 +36,12 @@ function ProductBlock({ product, index }: { product: Product; index: number }) {
       </Reveal>
 
       <Reveal className="product__art" delay={90}>
-        <ProductArt id={product.id} />
+        <SitePreview
+          base={product.preview}
+          domain={product.domain}
+          alt={`${product.name} — ${product.kicker.toLowerCase()} live on ${product.domain}`}
+          href={product.url}
+        />
       </Reveal>
     </div>
   );
@@ -90,7 +54,7 @@ export default function Showcase() {
         <Reveal>
           <>
             <h2 id="work-title" style={{ fontSize: "clamp(30px, 4.6vw, 52px)", maxWidth: "18ch" }}>
-              Two products, built from the database up.
+              Two live products.
             </h2>
             <p className="lede" style={{ marginTop: 18, maxWidth: "56ch" }}>
               Each one is self-hosted and carries its own engine, payment rails, and

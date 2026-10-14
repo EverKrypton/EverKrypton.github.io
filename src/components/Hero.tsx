@@ -1,5 +1,4 @@
 import Reveal from "./Reveal";
-import ExchangeTerminal from "./ExchangeTerminal";
 import { HERO } from "../data/site";
 import { useRotator } from "../hooks/useReveal";
 import { IconArrowDown } from "./Icons";
@@ -47,10 +46,6 @@ export default function Hero() {
               </span>
             ))}
           </>
-        </Reveal>
-
-        <Reveal delay={240}>
-          <ExchangeTerminal />
         </Reveal>
       </div>
     </section>
