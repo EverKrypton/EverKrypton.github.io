@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Brasa — 24 stickers animados para Telegram · CENIZA</title>
-<meta name="description" content="Pack de 24 stickers animados para Telegram: 16 expresiones y 8 reacciones de texto. Documentos Lottie (.tgs) generados por código, verificados con rlottie, 512×512, 3 segundos, menos de 12 KB cada uno.">
+<title>Brasa — sticker packs para Telegram</title>
+<meta name="description" content="Packs de stickers animados para Telegram generados por código: 24 documentos Lottie, 16 expresiones y 8 reacciones, en cualquier color de marca. Verificados con rlottie.">
 <meta name="theme-color" content="#0B0908">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://everkrypton.github.io/tg/">
-<meta property="og:title" content="Brasa — 24 stickers animados para Telegram">
-<meta property="og:description" content="16 expresiones + 8 reacciones. Lottie real, verificado con rlottie. Generado por código, sin software de dibujo.">
+<meta property="og:title" content="Brasa — sticker packs para Telegram">
+<meta property="og:description" content="24 stickers Lottie por pack, en el color de tu proyecto. Generado por código, verificado con rlottie.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='55' r='38' fill='%23FF5A1F'/><circle cx='38' cy='50' r='7' fill='%23F4EDE4'/><circle cx='62' cy='50' r='7' fill='%23F4EDE4'/><circle cx='38' cy='50' r='4' fill='%230B0908'/><circle cx='62' cy='50' r='4' fill='%230B0908'/></svg>">
 <style>
 @font-face{font-family:"Space Grotesk";src:url("fonts/SpaceGrotesk.ttf") format("truetype");font-weight:300 700;font-display:swap}
@@ -18,113 +18,127 @@
 
 :root{
   --ink:#0B0908; --ink-2:#14100D; --ink-3:#1E1815;
-  --ember:#FF5A1F; --ember-hot:#FF8A3D; --gold:#FFB347;
+  --ember:#FF5A1F; --hot:#FF8A3D; --gold:#FFB347;
   --cream:#F4EDE4; --ash:#6B6259; --ash-2:#3A332D;
   --r:2px; --ease:cubic-bezier(.2,.7,.3,1);
+  --brand:#FF5A1F;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--ink);color:var(--cream);font-family:"Space Grotesk",system-ui,sans-serif;
-  -webkit-font-smoothing:antialiased;line-height:1.4;overflow-x:hidden}
+  -webkit-font-smoothing:antialiased;line-height:1.45;overflow-x:hidden}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 @media (max-width:900px){.wrap{padding:0 20px}}
 
 .label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--ash)}
-.serif{font-family:"Instrument Serif",serif;font-style:italic;letter-spacing:-.02em}
+.mono{font-family:"JetBrains Mono",monospace}
 
-header{padding:88px 0 56px;position:relative}
-header .glow{position:absolute;right:-220px;top:-300px;width:min(720px,80vw);height:min(720px,80vw);
-  border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.2),rgba(255,90,31,0) 66%);
-  pointer-events:none}
-h1{font-size:clamp(44px,7.5vw,96px);font-weight:700;letter-spacing:-.04em;line-height:.92;margin:22px 0 0}
-h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--ember)}
-.lede{max-width:60ch;margin-top:26px;font-size:18px;font-weight:300;color:#CFC5B8}
+header{padding:80px 0 48px;position:relative}
+header .glow{position:absolute;right:-200px;top:-280px;width:min(700px,80vw);height:min(700px,80vw);
+  border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--brand) 22%,transparent),transparent 66%);
+  pointer-events:none;transition:background .4s var(--ease)}
+h1{font-size:clamp(42px,7vw,88px);font-weight:700;letter-spacing:-.04em;line-height:.94;margin:20px 0 0}
+h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--brand);
+  transition:color .4s var(--ease)}
+.lede{max-width:62ch;margin-top:24px;font-size:17.5px;font-weight:300;color:#CFC5B8}
 .lede strong{color:var(--cream);font-weight:500}
 
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
-.badge{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;
-  border:1px solid rgba(244,237,228,.16);border-radius:var(--r);padding:8px 12px;color:var(--ash)}
-.badge b{color:var(--gold);font-weight:500}
-.badge a{color:var(--cream);text-decoration:none}
-.badge a:hover{color:var(--ember)}
+.hero-strip{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.hero-strip .cell{width:88px;height:88px;border:1px solid rgba(244,237,228,.12);
+  border-radius:var(--r);background:var(--ink-2)}
+.hero-strip .cell canvas{width:100%!important;height:100%!important;display:block}
 
-section{padding:64px 0}
+section{padding:56px 0}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;
-  flex-wrap:wrap;border-top:1px solid rgba(244,237,228,.14);padding-top:20px;margin-bottom:36px}
-.sec-head h2{font-size:clamp(26px,3.4vw,34px);font-weight:500;letter-spacing:-.02em}
-.sec-head h2 em{font-family:"Instrument Serif",serif;font-style:italic;color:var(--ember)}
+  flex-wrap:wrap;border-top:1px solid rgba(244,237,228,.14);padding-top:18px;margin-bottom:32px}
+.sec-head h2{font-size:clamp(24px,3.2vw,32px);font-weight:500;letter-spacing:-.02em}
+.sec-head h2 em{font-family:"Instrument Serif",serif;font-style:italic;color:var(--brand)}
 
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+/* colourway picker */
+.colorways{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;align-items:center}
+.sw{appearance:none;width:34px;height:34px;border-radius:50%;border:2px solid transparent;
+  cursor:pointer;padding:0;position:relative;transition:transform .18s var(--ease),border-color .18s}
+.sw:hover{transform:scale(1.12)}
+.sw[aria-pressed="true"]{border-color:var(--cream)}
+.sw:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.cw-name{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cream);margin-left:8px;min-width:9ch}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
 .tab{appearance:none;border:1px solid rgba(244,237,228,.16);background:transparent;
   color:var(--ash);font-family:"JetBrains Mono",monospace;font-size:11px;
-  letter-spacing:.14em;text-transform:uppercase;padding:10px 16px;border-radius:var(--r);
+  letter-spacing:.14em;text-transform:uppercase;padding:9px 15px;border-radius:var(--r);
   cursor:pointer;transition:all .18s var(--ease)}
 .tab b{color:var(--ash-2);font-weight:500;margin-left:6px}
-.tab:hover{border-color:rgba(255,90,31,.5);color:var(--cream)}
-.tab.is-on{background:var(--ember);border-color:var(--ember);color:#0B0908}
+.tab:hover{border-color:color-mix(in srgb,var(--brand) 55%,transparent);color:var(--cream)}
+.tab.is-on{background:var(--brand);border-color:var(--brand);color:#0B0908}
 .tab.is-on b{color:rgba(11,9,8,.55)}
 .tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
-.stickers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-@media (max-width:900px){.stickers{grid-template-columns:repeat(2,1fr)}gap:14px}
-.sticker{border:1px solid rgba(244,237,228,.12);border-radius:var(--r);padding:18px;
+.stickers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:900px){.stickers{grid-template-columns:repeat(2,1fr);gap:12px}}
+.sticker{border:1px solid rgba(244,237,228,.12);border-radius:var(--r);padding:16px;
   background:linear-gradient(180deg,#14100D,#0E0B0A);text-align:center;
   transition:border-color .2s var(--ease),transform .2s var(--ease)}
-.sticker:hover{border-color:rgba(255,90,31,.55);transform:translateY(-2px)}
+.sticker:hover{border-color:color-mix(in srgb,var(--brand) 60%,transparent);transform:translateY(-2px)}
 .sticker .box{width:100%;aspect-ratio:1;display:grid;place-items:center}
 .sticker canvas{width:100%!important;height:100%!important;display:block}
-.sticker .meta{margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sticker .meta{margin-top:10px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .sticker .meta .lbl{font-size:14px;color:var(--cream)}
 .sticker .meta b{font-family:"JetBrains Mono",monospace;font-size:10px;
   letter-spacing:.08em;font-weight:500;color:var(--ash)}
 .sticker.is-hidden{display:none}
 
-.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(244,237,228,.1);
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(244,237,228,.1);
   border:1px solid rgba(244,237,228,.1)}
-@media (max-width:900px){.specs{grid-template-columns:repeat(2,1fr)}}
-.spec{background:var(--ink);padding:24px 20px}
-.spec .v{font-family:"JetBrains Mono",monospace;font-size:28px;letter-spacing:-.03em;margin-top:8px}
-.spec .v.ok{color:var(--gold)}
-
-.swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-@media (max-width:900px){.swatches{grid-template-columns:repeat(3,1fr)}}
-.sw{border:1px solid rgba(244,237,228,.12);border-radius:var(--r);overflow:hidden}
-.sw .chip{height:84px}
-.sw .n{padding:10px 12px;font-family:"JetBrains Mono",monospace;font-size:10px;
-  letter-spacing:.06em;color:var(--ash);display:flex;justify-content:space-between;gap:6px}
+@media (max-width:900px){.steps{grid-template-columns:1fr}}
+.step{background:var(--ink);padding:26px 22px}
+.step .n{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;color:var(--brand)}
+.step h3{font-size:18px;font-weight:500;margin:10px 0 8px}
+.step p{font-size:14.5px;color:#CFC5B8;font-weight:300}
 
 pre{background:var(--ink-2);border:1px solid rgba(244,237,228,.1);border-radius:var(--r);
-  padding:20px;overflow-x:auto;font-family:"JetBrains Mono",monospace;font-size:12.5px;
-  line-height:1.75;color:#CFC5B8}
-pre b{color:var(--gold);font-weight:500}
+  padding:18px 20px;overflow-x:auto;font-family:"JetBrains Mono",monospace;font-size:12.5px;
+  line-height:1.8;color:#CFC5B8}
+pre b{color:var(--brand);font-weight:500}
 pre i{color:var(--ash);font-style:normal}
 
-footer{padding:64px 0 96px;border-top:1px solid rgba(244,237,228,.12);color:var(--ash);
+.specs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(244,237,228,.1);
+  border:1px solid rgba(244,237,228,.1);margin-bottom:24px}
+@media (max-width:900px){.specs{grid-template-columns:repeat(2,1fr)}}
+.spec{background:var(--ink);padding:22px 20px}
+.spec .v{font-family:"JetBrains Mono",monospace;font-size:26px;letter-spacing:-.03em;margin-top:6px;color:var(--gold)}
+
+footer{padding:56px 0 88px;border-top:1px solid rgba(244,237,228,.12);color:var(--ash);
   font-size:12.5px;font-family:"JetBrains Mono",monospace;letter-spacing:.06em;line-height:2}
 footer a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--ash-2)}
-footer a:hover{color:var(--ember);border-color:var(--ember)}
+footer a:hover{color:var(--brand);border-color:var(--brand)}
 </style>
 </head>
 <body>
 
 <header><div class="wrap" style="position:relative">
   <div class="glow"></div>
-  <div class="label">CENIZA · pack 001 · Brasa</div>
-  <h1>24 stickers<br><em>que respiran.</em></h1>
-  <p class="lede">16 expresiones y 8 reacciones de texto. Cada uno es un documento
+  <div class="label">Sticker packs · Telegram</div>
+  <h1>Tu proyecto,<br><em>en stickers.</em></h1>
+  <p class="lede">Un pack completo de <strong>24 stickers animados</strong> — 16 expresiones y
+  8 reacciones de texto — en el color de tu marca. Cada uno es un documento
   <strong>Lottie real</strong> (.tgs), no un GIF convertido: vectorial, 512×512,
-  3 segundos exactos, menos de 12 KB. Todo generado por código — sin software de dibujo,
-  sin assets externos.</p>
-  <div class="badges">
-    <span class="badge"><b>24</b> stickers</span>
-    <span class="badge"><b>173</b> KB total</span>
-    <span class="badge"><b>3.00</b> s loop</span>
-    <span class="badge"><b>0</b> fallos de QA</span>
-    <span class="badge"><a href="https://github.com/EverKrypton/ceniza-brasa-stickers">repositorio ↗</a></span>
-  </div>
+  3 segundos exactos, menos de 12 KB. Generado por código, sin software de dibujo.</p>
+  <div class="hero-strip" id="hero-strip"></div>
 </div></header>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <h2>Elige el <em>color</em></h2>
+    <div class="label" id="cw-label">ember</div>
+  </div>
+  <div class="colorways" id="colorways"></div>
+  <p class="label">Mismo dibujo, misma animación, misma identidad — la paleta es un parámetro.
+  El pack se regenera en un comando.</p>
+</div></section>
 
 <section><div class="wrap">
   <div class="sec-head">
@@ -137,44 +151,52 @@ footer a:hover{color:var(--ember);border-color:var(--ember)}
     <button class="tab" data-group="reaction" role="tab">reacciones <b>8</b></button>
   </div>
   <div class="stickers" id="stickers"></div>
-  <p class="label" style="margin-top:24px">Se reproducen desde su .tgs real, descomprimido en el navegador.</p>
+  <p class="label" style="margin-top:22px">Cada uno se reproduce desde su .tgs real,
+  descomprimido en el navegador con el mismo motor que usa Telegram.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><h2>Cómo se <em>hace</em></h2><div class="label">un comando</div></div>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>Tu color</h3>
+      <p>Pasas el hex de tu marca. La paleta deriva cuerpo, luces, sombras y acentos
+      manteniendo la saturación.</p></div>
+    <div class="step"><div class="n">02</div><h3>El rig</h3>
+      <p>Un personaje paramétrico: ojos, cejas, bocas, brazos y props. Cada sticker es
+      una pose sobre el mismo rig, no un dibujo nuevo.</p></div>
+    <div class="step"><div class="n">03</div><h3>QA automático</h3>
+      <p>Se renderiza con rlottie y se verifican formato, frames vacíos, bordes, loop
+      perfecto y peso. Si algo falla, no se publica.</p></div>
+  </div>
+  <pre style="margin-top:26px"><i># un pack completo en el color de tu proyecto</i>
+python3 scripts/stickers.py <b>--color "#7C3AED"</b>
+
+<i># o una paleta con nombre</i>
+python3 scripts/stickers.py <b>--palette mint</b>
+
+<i># QA: formato, frames vacíos, bordes, loop, peso</i>
+python3 scripts/verify.py
+<i>24 stickers · 0 failing</i></pre>
 </div></section>
 
 <section><div class="wrap">
   <div class="sec-head"><h2>Especificaciones</h2><div class="label">verificado con rlottie</div></div>
   <div class="specs">
-    <div class="spec"><div class="label">Canvas</div><div class="v ok">512×512</div></div>
-    <div class="spec"><div class="label">Duración</div><div class="v ok">3.00 s</div></div>
-    <div class="spec"><div class="label">Peso máximo</div><div class="v ok">11.7 KB</div></div>
+    <div class="spec"><div class="label">Canvas</div><div class="v">512×512</div></div>
+    <div class="spec"><div class="label">Duración</div><div class="v">3.00 s</div></div>
+    <div class="spec"><div class="label">Peso máximo</div><div class="v">11 KB</div></div>
     <div class="spec"><div class="label">Límite Telegram</div><div class="v">64 KB</div></div>
   </div>
-  <pre style="margin-top:28px"><i>$</i> python3 scripts/verify.py
-file                  canvas frames    dur    size   loop  status
-brasa-hola.tgs       <b>512x512</b>     90  <b>3.00s</b>   6.3K    0.0  <b>OK</b>
-brasa-amor.tgs       <b>512x512</b>     90  <b>3.00s</b>  11.7K    1.0  <b>OK</b>
-brasa-furia.tgs      <b>512x512</b>     90  <b>3.00s</b>   6.6K    0.2  <b>OK</b>
-<i>...</i>
-<b>24 stickers · 173.1 KB total · 0 failing</b></pre>
-</div></section>
-
-<section><div class="wrap">
-  <div class="sec-head"><h2>Paleta</h2><div class="label">marca</div></div>
-  <div class="swatches">
-    <div class="sw"><div class="chip" style="background:#0B0908"></div><div class="n"><span>ink</span><span>#0B0908</span></div></div>
-    <div class="sw"><div class="chip" style="background:#14100D"></div><div class="n"><span>ink-2</span><span>#14100D</span></div></div>
-    <div class="sw"><div class="chip" style="background:#FF5A1F"></div><div class="n"><span>ember</span><span>#FF5A1F</span></div></div>
-    <div class="sw"><div class="chip" style="background:#FFB347"></div><div class="n"><span>gold</span><span>#FFB347</span></div></div>
-    <div class="sw"><div class="chip" style="background:#F4EDE4"></div><div class="n"><span>cream</span><span>#F4EDE4</span></div></div>
-    <div class="sw"><div class="chip" style="background:#FF8A3D"></div><div class="n"><span>hot</span><span>#FF8A3D</span></div></div>
-  </div>
+  <p class="label">Formato .tgs (Lottie 5.7.4 + gzip) y espejo .webm VP9 con alpha.
+  Verificado frame a frame con rlottie, el motor C++ que Telegram envía en el cliente.</p>
 </div></section>
 
 <footer><div class="wrap">
-  CENIZA · Brasa · <a href="https://github.com/EverKrypton/ceniza-brasa-stickers">github.com/EverKrypton/ceniza-brasa-stickers</a><br>
+  Brasa · sticker packs · <a href="https://github.com/EverKrypton/ceniza-brasa-stickers">github.com/EverKrypton/ceniza-brasa-stickers</a><br>
   Lottie 5.7.4 · rlottie · Space Grotesk (SIL OFL) · generado por código
 </div></footer>
 
-<script src="lottie.min.js"></script>
+<script src="brand/vendor/lottie.min.js"></script>
 <script>
 async function loadTgs(url) {
   const res = await fetch(url);
@@ -184,34 +206,117 @@ async function loadTgs(url) {
 }
 
 const grid = document.getElementById("stickers");
+const strip = document.getElementById("hero-strip");
+const anims = [];
 
-function paint(box) {
-  loadTgs(box.dataset.tgs).then((data) => {
-    lottie.loadAnimation({
-      container: box, renderer: "canvas", loop: true, autoplay: true,
-      animationData: data,
-      rendererSettings: { clearCanvas: true, preserveAspectRatio: "xMidYMid meet" },
-    });
-  }).catch(() => {
-    box.innerHTML = '<div class="label">no se pudo cargar</div>';
+function play(box, data) {
+  const a = lottie.loadAnimation({
+    container: box, renderer: "canvas", loop: true, autoplay: true,
+    animationData: data,
+    rendererSettings: { clearCanvas: true, preserveAspectRatio: "xMidYMid meet" },
   });
+  return a;
+}
+
+/* Colourways are just packs built into separate folders. The picker swaps the
+   folder prefix, so the page never duplicates sticker data. */
+const COLORWAYS = [
+  { name: "ember",   hex: "#FF5A1F", dir: "stickers" },
+  { name: "violet",  hex: "#8B5CF6", dir: "stickers/violet" },
+  { name: "mint",    hex: "#22C55E", dir: "stickers/mint" },
+  { name: "gold",    hex: "#F59E0B", dir: "stickers/gold" },
+  { name: "rose",    hex: "#F43F5E", dir: "stickers/rose" },
+  { name: "glacier", hex: "#38BDF8", dir: "stickers/glacier" },
+];
+
+let current = COLORWAYS[0];
+const cache = new Map();
+
+async function loadPack(cw) {
+  if (cache.has(cw.name)) return cache.get(cw.name);
+  const m = await fetch(cw.dir + "/manifest.json").then((r) => r.json());
+  const items = m.items.map((it) => ({ ...it, url: cw.dir + "/" + it.name + ".tgs" }));
+  cache.set(cw.name, items);
+  return items;
+}
+
+function card(item) {
+  const el = document.createElement("div");
+  el.className = "sticker";
+  el.dataset.group = item.group;
+  el.innerHTML =
+    '<div class="box"></div>' +
+    '<div class="meta"><span class="lbl">' + item.label + '</span>' +
+    '<b>' + item.kb.toFixed(1) + ' KB</b></div>';
+  return el;
+}
+
+async function showColorway(cw) {
+  current = cw;
+  document.documentElement.style.setProperty("--brand", cw.hex);
+  document.getElementById("cw-label").textContent = cw.name;
+  document.querySelectorAll(".sw").forEach((b) =>
+    b.setAttribute("aria-pressed", String(b.dataset.name === cw.name)));
+
+  const items = await loadPack(cw);
+
+  /* Rebuild the grid instead of swapping animationData in place: lottie keeps
+     per-container state, and reusing a destroyed container leaves some cells
+     blank. Rebuilding is a few dozen nodes and it is deterministic. */
+  for (const a of anims) a.destroy();
+  anims.length = 0;
+  grid.innerHTML = "";
+  strip.innerHTML = "";
+
+  const active = document.querySelector(".tab.is-on").dataset.group;
+  for (const item of items) {
+    const el = card(item);
+    if (active !== "all" && item.group !== active) el.classList.add("is-hidden");
+    grid.appendChild(el);
+  }
+
+  await Promise.all(items.map(async (item, i) => {
+    const box = grid.children[i].querySelector(".box");
+    try {
+      const data = await loadTgs(item.url);
+      anims.push(play(box, data));
+    } catch (e) {
+      box.innerHTML = '<div class="label">error</div>';
+    }
+  }));
+
+  /* hero strip: a few expressions at a glance */
+  const picks = ["brasa-hola", "brasa-amor", "brasa-dale", "brasa-gg"];
+  const byName = new Map(items.map((i) => [i.name, i]));
+  for (const name of picks) {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    strip.appendChild(cell);
+  }
+  await Promise.all(picks.map(async (name, i) => {
+    const item = byName.get(name);
+    if (!item) return;
+    const data = await loadTgs(item.url);
+    play(strip.children[i], data);
+  }));
 }
 
 fetch("stickers/manifest.json")
   .then((r) => r.json())
-  .then((m) => {
-    m.items.forEach((item) => {
-      const el = document.createElement("div");
-      el.className = "sticker";
-      el.dataset.group = item.group;
-      el.innerHTML =
-        '<div class="box" data-tgs="stickers/' + item.name + '.tgs"></div>' +
-        '<div class="meta"><span class="lbl">' + item.label + '</span>' +
-        '<b>' + item.kb.toFixed(1) + ' KB</b></div>';
-      grid.appendChild(el);
-    });
+  .then(async (m) => {
     document.getElementById("count").textContent = m.count + " archivos";
-    grid.querySelectorAll("[data-tgs]").forEach(paint);
+
+    const picker = document.getElementById("colorways");
+    COLORWAYS.forEach((cw) => {
+      const b = document.createElement("button");
+      b.className = "sw";
+      b.dataset.name = cw.name;
+      b.style.background = cw.hex;
+      b.setAttribute("aria-pressed", "false");
+      b.setAttribute("aria-label", "Colorway " + cw.name);
+      b.addEventListener("click", () => showColorway(cw));
+      picker.appendChild(b);
+    });
 
     document.querySelectorAll(".tab").forEach((tab) => {
       tab.addEventListener("click", () => {
@@ -223,6 +328,8 @@ fetch("stickers/manifest.json")
         });
       });
     });
+
+    await showColorway(COLORWAYS[0]);
   });
 </script>
 </body>
