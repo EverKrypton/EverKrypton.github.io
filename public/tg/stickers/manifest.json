@@ -1,0 +1,174 @@
+{
+  "count": 24,
+  "limit_kb": 64,
+  "items": [
+    {
+      "name": "brasa-hola",
+      "label": "hola",
+      "group": "expression",
+      "kb": 6.3,
+      "frames": 90
+    },
+    {
+      "name": "brasa-si",
+      "label": "sí",
+      "group": "expression",
+      "kb": 6.2,
+      "frames": 90
+    },
+    {
+      "name": "brasa-no",
+      "label": "no",
+      "group": "expression",
+      "kb": 6.0,
+      "frames": 90
+    },
+    {
+      "name": "brasa-risa",
+      "label": "risa",
+      "group": "expression",
+      "kb": 6.3,
+      "frames": 90
+    },
+    {
+      "name": "brasa-amor",
+      "label": "amor",
+      "group": "expression",
+      "kb": 11.7,
+      "frames": 90
+    },
+    {
+      "name": "brasa-furia",
+      "label": "furia",
+      "group": "expression",
+      "kb": 6.6,
+      "frames": 90
+    },
+    {
+      "name": "brasa-sueno",
+      "label": "sueño",
+      "group": "expression",
+      "kb": 6.3,
+      "frames": 90
+    },
+    {
+      "name": "brasa-gracias",
+      "label": "gracias",
+      "group": "expression",
+      "kb": 6.1,
+      "frames": 90
+    },
+    {
+      "name": "brasa-espera",
+      "label": "espera",
+      "group": "expression",
+      "kb": 6.1,
+      "frames": 90
+    },
+    {
+      "name": "brasa-wtf",
+      "label": "wtf",
+      "group": "expression",
+      "kb": 6.1,
+      "frames": 90
+    },
+    {
+      "name": "brasa-fuego",
+      "label": "fuego",
+      "group": "expression",
+      "kb": 6.5,
+      "frames": 90
+    },
+    {
+      "name": "brasa-cafe",
+      "label": "café",
+      "group": "expression",
+      "kb": 6.5,
+      "frames": 90
+    },
+    {
+      "name": "brasa-llora",
+      "label": "llora",
+      "group": "expression",
+      "kb": 6.5,
+      "frames": 90
+    },
+    {
+      "name": "brasa-pensando",
+      "label": "pensando",
+      "group": "expression",
+      "kb": 6.1,
+      "frames": 90
+    },
+    {
+      "name": "brasa-cool",
+      "label": "cool",
+      "group": "expression",
+      "kb": 6.2,
+      "frames": 90
+    },
+    {
+      "name": "brasa-asustado",
+      "label": "asustado",
+      "group": "expression",
+      "kb": 6.2,
+      "frames": 90
+    },
+    {
+      "name": "brasa-esto",
+      "label": "esto",
+      "group": "reaction",
+      "kb": 9.3,
+      "frames": 90
+    },
+    {
+      "name": "brasa-jaja",
+      "label": "jaja",
+      "group": "reaction",
+      "kb": 8.7,
+      "frames": 90
+    },
+    {
+      "name": "brasa-nooo",
+      "label": "nooo",
+      "group": "reaction",
+      "kb": 9.0,
+      "frames": 90
+    },
+    {
+      "name": "brasa-epa",
+      "label": "epa",
+      "group": "reaction",
+      "kb": 8.2,
+      "frames": 90
+    },
+    {
+      "name": "brasa-dale",
+      "label": "dale",
+      "group": "reaction",
+      "kb": 8.5,
+      "frames": 90
+    },
+    {
+      "name": "brasa-gg",
+      "label": "gg",
+      "group": "reaction",
+      "kb": 8.4,
+      "frames": 90
+    },
+    {
+      "name": "brasa-f",
+      "label": "f",
+      "group": "reaction",
+      "kb": 7.6,
+      "frames": 90
+    },
+    {
+      "name": "brasa-ya",
+      "label": "ya",
+      "group": "reaction",
+      "kb": 7.8,
+      "frames": 90
+    }
+  ]
+}
